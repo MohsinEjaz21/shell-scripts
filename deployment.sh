@@ -26,7 +26,7 @@ do
         temp=${temp//.java/.class}
     fi
 
-    temp='unzip /Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/hwsw-webapp.war '$temp
+    temp='unzip -o /Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/hwsw-webapp.war '$temp
     temp=' '$temp' -d /Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/final_war'
     echo $temp | sed 's/src\/main\/java/WEB-INF\/classes/'
     list+=($temp'\n')
