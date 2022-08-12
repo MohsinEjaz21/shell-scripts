@@ -1,5 +1,5 @@
 # hello World
-echo "============================"
+# echo "============================"
 
 # GIT_DIRECTORY='/Users/ibmislamabad/Desktop/Kyndryl/kyndryl-workspace/hwsw-webapp'
 # FILES=`git --git-dir=$GIT_DIRECTORY/.git --work-tree=$GIT_DIRECTORY ls-files --modified`
@@ -36,17 +36,18 @@ do
     fi
 
     temp='unzip -o '$WAR_PATH' '$temp' -d '$DESTINATION' '
-    echo $temp
-    list+=($temp'\n')
+    # echo $temp
+    exec $temp &
+    # list+=($temp'\n')
 
 done
 
 # copy the $temp to clipboard
-echo ${list[@]} | pbcopy
+# echo ${list[@]} | pbcopy
 
 # for each list item execute it
 
-echo "============================"
+# echo "============================"
 
 
 
