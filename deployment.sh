@@ -2,15 +2,25 @@
 echo "============================"
 
 GIT_DIRECTORY='/Users/ibmislamabad/Desktop/Kyndryl/kyndryl-workspace/hwsw-webapp'
-FILES=`git --git-dir=$GIT_DIRECTORY/.git --work-tree=$GIT_DIRECTORY ls-files --modified`
+# FILES=`git --git-dir=$GIT_DIRECTORY/.git --work-tree=$GIT_DIRECTORY ls-files --modified`
 declare -a list
+declare -a FILES
+
+FILES=(
+'src/main/java/com/ibm/hscms/common/Queries.class'
+'src/main/java/com/ibm/hscms/dao/modules/server/IServerInventoryDAO.class'
+'src/main/java/com/ibm/hscms/dao/modules/server/ServerInventoryDAOImpl.class'
+'src/main/java/com/ibm/hscms/services/modules/servers/ServerInventoryService.class'
+'src/main/java/com/ibm/hscms/web/framework/ApplicationConfig.class'
+'src/main/java/com/ibm/hscms/web/modules/server/ServerInventoryAction.class'
+)
 
 # replace rules for files names
 # src/main/resources replaceWith WEB-INF/classes
 # src/main/java replaceWith WEB-INF/lib
 # .java replaceWith .class
 # then print them
-for file in $FILES
+for file in ${FILES[@]}
 do
 # temp
 # relace src/main/resources with WEB-INF/classes and return new string
@@ -35,5 +45,7 @@ done
 
 # copy the $temp to clipboard
 echo ${list[@]} | pbcopy
+
+# for each list item execute it
 
 echo "============================"
