@@ -7,13 +7,24 @@ declare -a list
 declare -a FILES
 
 FILES=(
-'src/main/java/com/ibm/hscms/common/Queries.java'
-'src/main/java/com/ibm/hscms/dao/modules/server/IServerInventoryDAO.java'
-'src/main/java/com/ibm/hscms/dao/modules/server/ServerInventoryDAOImpl.java'
-'src/main/java/com/ibm/hscms/services/modules/servers/ServerInventoryService.java'
-'src/main/java/com/ibm/hscms/web/framework/ApplicationConfig.java'
-'src/main/java/com/ibm/hscms/web/modules/server/ServerInventoryAction.java'
+src/main/java/com/ibm/hscms/common/Queries.java
+src/main/java/com/ibm/hscms/dao/modules/server/IServerInventoryDAO.java
+src/main/java/com/ibm/hscms/dao/modules/server/ServerInventoryDAOImpl.java
+src/main/java/com/ibm/hscms/services/modules/servers/ServerInventoryService.java
+src/main/java/com/ibm/hscms/web/framework/ApplicationConfig.java
+src/main/java/com/ibm/hscms/web/modules/server/ServerInventoryAction.java
 )
+
+
+# read FILES.
+
+# while read line
+# do
+#     FILES=("${FILES[@]}" $line)
+#     case $input in [break]);; *) break;; esac
+# done
+
+# echo ${FILES[@]}
 
 # replace rules for files names
 # src/main/resources replaceWith WEB-INF/classes
