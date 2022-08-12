@@ -16,31 +16,16 @@ src/main/java/com/ibm/hscms/web/modules/server/ServerInventoryAction.java
 )
 
 
-# read FILES.
-
-# while read line
-# do
-#     FILES=("${FILES[@]}" $line)
-#     case $input in [break]);; *) break;; esac
-# done
-
-# echo ${FILES[@]}
-
-# replace rules for files names
-# src/main/resources replaceWith WEB-INF/classes
-# src/main/java replaceWith WEB-INF/lib
-# .java replaceWith .class
-# then print them
 for file in ${FILES[@]}
 do
 # temp
-# relace src/main/resources with WEB-INF/classes and return new string
+   # relace src/main/resources with WEB-INF/classes
     if [[ $file == src/main/resources/* ]]
     then
         temp=${file//src\/main\/resources/WEB-INF\/classes}
     fi
 
-# relace src/main/java with WEB-INF/classes and return new string
+    # relace src/main/java with WEB-INF/classes & .java replace with .class
     if [[ $file == src/main/java/* ]]
     then
         temp=${file//src\/main\/java/WEB-INF\/classes}
@@ -60,3 +45,16 @@ echo ${list[@]} | pbcopy
 # for each list item execute it
 
 echo "============================"
+
+
+
+
+# read FILES.
+
+# while read line
+# do
+#     FILES=("${FILES[@]}" $line)
+#     case $input in [break]);; *) break;; esac
+# done
+
+# echo ${FILES[@]}
