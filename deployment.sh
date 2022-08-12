@@ -4,8 +4,8 @@ echo "============================"
 # GIT_DIRECTORY='/Users/ibmislamabad/Desktop/Kyndryl/kyndryl-workspace/hwsw-webapp'
 # FILES=`git --git-dir=$GIT_DIRECTORY/.git --work-tree=$GIT_DIRECTORY ls-files --modified`
 
-WAR='/Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/hwsw-webapp.war'
-DESTINATION='/Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/final_war'
+WAR_PATH='/Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/hwsw-webapp.war'
+DESTINATION='/Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/FINAL_WAR'
 declare -a list
 declare -a FILES
 
@@ -35,7 +35,7 @@ do
         temp=${temp//.java/.class}
     fi
 
-    temp='unzip -o '$WAR' '$temp' -d '$DESTINATION' '
+    temp='unzip -o '$WAR_PATH' '$temp' -d '$DESTINATION' '
     echo $temp
     list+=($temp'\n')
 
