@@ -7,12 +7,12 @@ declare -a list
 declare -a FILES
 
 FILES=(
-'src/main/java/com/ibm/hscms/common/Queries.class'
-'src/main/java/com/ibm/hscms/dao/modules/server/IServerInventoryDAO.class'
-'src/main/java/com/ibm/hscms/dao/modules/server/ServerInventoryDAOImpl.class'
-'src/main/java/com/ibm/hscms/services/modules/servers/ServerInventoryService.class'
-'src/main/java/com/ibm/hscms/web/framework/ApplicationConfig.class'
-'src/main/java/com/ibm/hscms/web/modules/server/ServerInventoryAction.class'
+'src/main/java/com/ibm/hscms/common/Queries.java'
+'src/main/java/com/ibm/hscms/dao/modules/server/IServerInventoryDAO.java'
+'src/main/java/com/ibm/hscms/dao/modules/server/ServerInventoryDAOImpl.java'
+'src/main/java/com/ibm/hscms/services/modules/servers/ServerInventoryService.java'
+'src/main/java/com/ibm/hscms/web/framework/ApplicationConfig.java'
+'src/main/java/com/ibm/hscms/web/modules/server/ServerInventoryAction.java'
 )
 
 # replace rules for files names
