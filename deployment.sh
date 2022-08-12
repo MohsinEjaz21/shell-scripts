@@ -1,7 +1,7 @@
 # hello World
 echo "============================"
 
-GIT_DIRECTORY='/Users/ibmislamabad/Desktop/Kyndryl/kyndryl-workspace/hwsw-webapp'
+# GIT_DIRECTORY='/Users/ibmislamabad/Desktop/Kyndryl/kyndryl-workspace/hwsw-webapp'
 # FILES=`git --git-dir=$GIT_DIRECTORY/.git --work-tree=$GIT_DIRECTORY ls-files --modified`
 declare -a list
 declare -a FILES
@@ -34,7 +34,7 @@ do
 
     temp='unzip -o /Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/hwsw-webapp.war '$temp
     temp=' '$temp' -d /Users/ibmislamabad/Desktop/Kyndryl/deployments/hwsw-webapp/final_war'
-    echo $temp | sed 's/src\/main\/java/WEB-INF\/classes/'
+    echo $temp
     list+=($temp'\n')
 
 done
